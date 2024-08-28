@@ -1,0 +1,345 @@
+/* -------------------------------------------------------------------------- */
+/* -------------------------- HOJA DE ESTILOS CSS --------------------------- */
+/* ----------------------------- ANTONIO RICHAUD ---------------------------- */
+/* -------------------------------------------------------------------------- */
+
+:root{
+  --white: #fff;
+  --gray-100: #CED4DA;
+  --gray-200: #D8DFE8;
+  --gray-300: #868E96;
+  --gray-400: #495057;
+  --gray-500: #343A40;
+  --light-blue-100: #F3F5FC;
+  --dark-blue-100: #609ED4;
+  --dark-blue-200:#356EA9;
+  --dark-blue-300: #0A3871;
+  --dark-blue-400: #072B61;
+}
+
+/* Aplica estilos base a todos los elementos */
+*{
+  margin: 0; /* Elimina márgenes por defecto */
+  padding: 0; /* Elimina rellenos por defecto */
+  box-sizing: border-box; /* Ajusta el modelo de caja para manejar el layout */
+  font-family: 'Inter', sans-serif; /* Establece la fuente predeterminada */
+}
+
+/* Estilos específicos para la etiqueta HTML */
+html{
+  font-size: 62.5%;  /* Establece el tamaño de fuente base para facilitar el uso de rem */
+  background-color: var(--light-blue-100); /* Color de fondo para toda la página */
+  overflow: hidden; /* Oculta el desbordamiento de contenido */
+}
+
+/* Estilos para la etiqueta main */
+main{
+  display: flex; /* Usa flexbox para disposición de elementos */
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas si es necesario */
+  gap: 2rem; /* Espacio entre elementos del flexbox */
+  height: 92vh; /* Altura del main basada en el alto de la ventana */
+  width: 100vw; /* Ancho del main basado en el ancho de la ventana */
+  padding: 3rem 10rem 1rem; /* Relleno alrededor del contenido */
+}
+
+/* Estilos para el contenedor del logo */
+.logo__container{
+  flex: 2; /* Toma 2 unidades de flexión en un contenedor flex */
+}
+
+/* Estilos para las secciones */
+section{
+  flex: 6; /* Toma 6 unidades de flexión en un contenedor flex */
+  display: flex; /* Usa flexbox para disposición de elementos internos */
+  flex-direction: column; /* Los elementos internos se disponen en columna */
+}
+
+/* Estilos para el contenedor de input */
+.input__container{
+  height: 90%; /* Altura del contenedor del input */
+  display: flex; /* Usa flexbox para disposición de elementos internos */
+  align-items: end; /* Alinea elementos internos al final del eje transversal */
+}
+
+/* Estilos para la etiqueta textarea */
+textarea{
+  height: 80%; /* Altura del textarea */
+  color: var(--dark-blue-300); /* Color del texto dentro del textarea */
+  background: none; /* Fondo transparente para el textarea */
+  resize: none; /* Deshabilita la capacidad de cambiar el tamaño del textarea */
+  border: none; /* Sin bordes para el textarea */
+  outline: none; /* Sin contorno al enfocar el textarea */
+  width: 100%; /* Ancho del textarea al 100% de su contenedor */
+  font-size: 3rem; /* Tamaño de la fuente del texto dentro del textarea */
+}
+
+/* Estilos para el placeholder del textarea */
+textarea::placeholder{
+  color: var(--dark-blue-300); /* Color del texto del placeholder */
+}
+
+/* Estilos para el placeholder del textarea en Internet Explorer */
+textarea:-ms-input-placeholder {
+  color: var(--dark-blue-300); /* Color del texto del placeholder en IE */
+}
+
+/* Estilos para el placeholder del textarea en Firefox */
+textarea::-moz-placeholder {
+  color: var(--dark-blue-300); /* Color del texto del placeholder en Firefox */
+}
+
+/* Estilos para el placeholder del textarea en otros navegadores */
+textarea::-webkit-input-placeholder {
+  color: var(--dark-blue-300); /* Color del texto del placeholder en navegadores basados en WebKit */
+}
+
+/* Estilos para los párrafos dentro del contenedor de acciones */
+.actions__container p{
+  color: var(--gray-400); /* Color del texto de los párrafos */
+  font-size: 1rem; /* Tamaño de la fuente de los párrafos */
+  display: flex; /* Usa flexbox para la disposición de los elementos internos */
+  align-items: center; /* Alinea los elementos internos en el centro del eje transversal */
+  margin-bottom: 1rem; /* Margen inferior para cada párrafo */
+}
+
+/* Estilos para los elementos span dentro de los párrafos en el contenedor de acciones */
+.actions__container p span{
+  margin-right: 0.5rem; /* Margen derecho para cada elemento span */
+}
+
+/* Estilos para las imágenes dentro de los elementos span en los párrafos */
+.actions__container p span img{
+  width: 1.3rem; /* Ancho fijo para las imágenes */
+}
+
+/* Estilos para el contenedor de botones */
+.buttons__container{
+  display: flex; /* Usa flexbox para la disposición de los botones */
+  gap: 2rem; /* Espacio entre los elementos del flexbox */
+  align-items: center; /* Alinea los elementos internos en el centro del eje transversal */
+  padding-bottom: 3rem; /* Relleno inferior para el contenedor */
+}
+
+/* Estilos para botones dentro del contenedor de botones */
+.buttons__container button{
+  flex: 1; /* Cada botón toma igual espacio en el contenedor flex */
+  padding: 1.5rem; /* Relleno alrededor del contenido del botón */
+  border-radius: 1.5rem; /* Bordes redondeados del botón */
+}
+
+/* Estilos para el estado hover de los botones */
+.buttons__container button:hover{
+  cursor: pointer; /* Cambia el cursor a puntero para indicar que es clickeable */
+}
+
+/* Estilos específicos para el botón 1 */
+.btn-1{
+  background-color: #0A3871; /* Color de fondo para el botón */
+  color: var(--white); /* Color del texto */
+  border: 1px solid var(--dark-blue-300); /* Borde del botón */
+}
+
+/* Estilos para el estado hover del botón 1 */
+.btn-1:hover{
+  background-color: var(--dark-blue-200); /* Cambia el color de fondo al hacer hover */
+}
+
+/* Estilos específicos para el botón 2 */
+.btn-2{
+  background-color: var(--gray-200); /* Color de fondo para el botón */
+  color: var(--dark-blue-300); /* Color del texto */
+  border: 1px solid var(--dark-blue-300); /* Borde del botón */
+}
+
+/* Estilos para el estado hover del botón 2 */
+.btn-2:hover{
+  background-color: var(--gray-100); /* Cambia el color de fondo al hacer hover */
+}
+
+/* Estilos para la etiqueta aside */
+aside{
+  display: flex; /* Usa flexbox para disposición de elementos internos */
+  flex-direction: column; /* Elementos internos dispuestos en columna */
+  flex: 2; /* Toma 2 unidades de flexión en un contenedor flex */
+  padding: 3rem; /* Relleno alrededor del contenido */
+  background-color: var(--white); /* Color de fondo */
+  border-radius: 2rem; /* Bordes redondeados */
+  justify-content: space-between; /* Espaciado entre elementos internos */
+  align-items: center; /* Alinea elementos internos en el centro */
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08); /* Sombra alrededor del aside */
+  color: var(--gray-400); /* Color del texto */
+  font-size: 2rem; /* Tamaño de la fuente */
+}
+
+/* Estilos para el contenedor interno en aside */
+.aside__container{
+  margin-top: 10rem; /* Margen superior */
+}
+
+/* Estilos para imágenes dentro de aside */
+aside img{
+  object-fit: cover; /* Ajusta la imagen para cubrir el área asignada */
+  width: 100%; /* Ancho al 100% de su contenedor */
+}
+
+/* Estilos para el texto en aside */
+.aside__text{
+  text-align: center; /* Alinea el texto al centro */
+  margin-top: 3rem; /* Margen superior */
+}
+
+/* Estilos para el primer párrafo en el texto de aside */
+.aside__text p:first-child{
+  color: var(--gray-500); /* Color del texto */
+  font-size: 2rem; /* Tamaño de la fuente */
+  font-weight: 800; /* Grosor de la fuente */
+}
+
+/* Estilos para el último párrafo en el texto de aside */
+.aside__text p:last-child{
+  color: var(--gray-400); /* Color del texto */
+  font-size: 1.5rem; /* Tamaño de la fuente */
+  margin-top: 1rem; /* Margen superior */
+}
+
+/* Estilos para nuevos párrafos en el aside */
+.aside__paragraph--new{
+  margin-top: 1rem; /* Margen superior para cada párrafo */
+  cursor: pointer; /* Cambia el cursor a puntero para indicar interactividad */
+}
+
+/* Estilos para el estado hover de los nuevos párrafos */
+.aside__paragraph--new:hover{
+  text-decoration: underline; /* Subraya el texto al pasar el cursor */
+}
+
+/* Estilos para párrafos seleccionados */
+.selected{
+  font-weight: bold; /* Texto en negrita para destacar el párrafo seleccionado */
+}
+
+/* Estilos para el botón de copiar */
+.copy__btn{  
+  margin-top: 1rem; /* Margen superior */
+  display: none; /* Oculta el botón por defecto */
+  width: 100%; /* Ancho al 100% de su contenedor */
+  padding: 1.5rem; /* Relleno alrededor del texto del botón */
+  border-radius: 1.5rem; /* Bordes redondeados */
+  background-color: transparent; /* Fondo transparente */
+  color: var(--dark-blue-300); /* Color del texto */
+  border: 1px solid var(--dark-blue-300); /* Borde del botón */
+}
+
+/* Estilos para el estado hover del botón de copiar */
+.copy__btn:hover{
+  background-color: var(--gray-200); /* Cambia el color de fondo al hacer hover */
+  cursor: pointer; /* Cambia el cursor a puntero */
+}
+
+/* Estilos para la etiqueta footer */
+footer{  
+  display: flex; /* Usa flexbox para disposición de elementos internos */
+  justify-content: center; /* Centra los elementos internos horizontalmente */
+  align-items: center; /* Centra los elementos internos verticalmente */
+  width: 100%; /* Ancho al 100% de su contenedor */
+  font-size: 1.8rem; /* Tamaño de la fuente */
+  text-align: center; /* Alinea el texto al centro */
+  font-weight: 300; /* Grosor de la fuente */
+}
+
+/* Estilos para imágenes en enlaces dentro de footer */
+footer span a img{
+  margin-left: 1rem; /* Margen izquierdo para las imágenes */
+  width: 25px; /* Ancho fijo para las imágenes */
+  height: 25px; /* Altura fija para las imágenes */
+}
+
+/* Estilos para enlaces dentro de footer */
+footer span a{
+  cursor: pointer; /* Cambia el cursor a puntero para indicar que es clickeable */
+}
+
+/* -------------------------------------------------------------------------- */
+/* -------------------------- RESPONSIVE DESIGN :) -------------------------- */
+/* -------------------------------------------------------------------------- */
+
+@media(max-width: 1024px) {
+
+  main {
+    padding: 3rem 5rem;
+  } 
+
+}
+
+@media(max-width: 768px) {
+
+  html{
+    overflow: visible;
+  }
+  main {
+    flex-direction: column;    
+    padding: 4rem;
+    height: 100%;
+  }
+
+  .logo__container img{
+    position: relative;
+    left: -4rem;
+  }
+
+  textarea{
+    margin-top: 0;
+    height: 50vh;
+  }
+
+  aside{
+    padding: 3.5rem;
+  }
+
+  aside img{
+    display: none;
+  }
+
+  .aside__text{
+    margin-top: 0;
+  }
+
+}
+
+@media(max-width: 425px){
+
+  main{
+    padding: 2rem;
+  }
+
+  .logo__container img{
+    position: relative;
+    left: -4rem;
+    width: 10rem;
+  }
+
+  textarea{
+    margin-top: 2rem;
+    font-size: 2.5rem;
+  }
+
+  .actions__container p{
+    font-size: 0.9rem;
+  }
+
+  .actions__container p span img{
+    width: 1rem;
+  }
+
+  .buttons__container{
+    flex-direction: column;
+  }
+  .buttons__container button{
+    width: 100%;
+  }
+
+  footer{
+    font-size: 1.5rem;
+  }
+
+}
